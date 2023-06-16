@@ -19,3 +19,15 @@ createInertiaApp({
         color: '#4B5563',
     },
 });
+
+//IntertialProgress.init({color: '#4B5563'});
+
+Echo.channel(`messanger`)
+    .listen
+    (
+        'MessageSent', (e) =>
+        {
+            console.log(e);
+            console.log(e.message);
+        }
+    );
